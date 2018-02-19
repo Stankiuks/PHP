@@ -7,3 +7,10 @@
  */
 $a = [-10,0,2,9,-5];
 
+rsort($a);
+
+$ilgis = count($a);
+for ($i = 0; $i < $ilgis; $i++){
+    echo $a[$i] . '<br>';
+}
+?>
