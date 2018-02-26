@@ -8,10 +8,18 @@
 
 $a = ['Jonas', 'Petras', 'Antanas', 'Povilas'];
 
-function poros(){
 
-    $x =
-}
 
+    $pora = [];
+    foreach ($a as $value){
+
+        if ($value != $value){
+            $pora += $value;
+        }
+    }
+    return $pora;
+
+
+echo $pora . '<ba>';
 
 ?>
