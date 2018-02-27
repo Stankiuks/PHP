@@ -24,11 +24,36 @@ class Radar
         return $this->date->diff(new \DateTime())->d  . ' ' . $this->number . ' ' . $this->distance . ' ' . $this->time;
 }
 }
-$ford = new Radar(new \DateTime('2018-03-01'), 'BRR001', '20km', '300 sec');
-$mazda = new Radar(new \DateTime('2018-03-01'), 'BRR002', '20km', '320 sec');
-$kia = new Radar(new \DateTime('2018-03-01'), 'BRR003', '20km', '310 sec');
-$opel = new Radar(new \DateTime('2018-03-01'), 'BRR004', '20km', '380 sec');
 
-echo $ford->getInfo();
+$automobiliai=[
+new Radar(new \DateTime('2018-01-01'), 'BRR001', '20km', '300 sec'),
+new Radar(new \DateTime('2018-02-24'), 'BRR002', '20km', '320 sec'),
+new Radar(new \DateTime('2017-06-30'), 'BRR003', '20km', '310 sec'),
+new Radar(new \DateTime('2017-03-01'), 'BRR004', '20km', '380 sec'),
+];
+
+//anonimine funkcija
+usort($automobiliai, function($p1, $p2) {
+    if ($p1['ugis'] == $p2['ugis‘]) {
+return 0;
+} elseif ($p1['ugis'] < $p2['ugis‘]) {
+        return -1;
+    } else {
+        return 1;
+    }
+});
+
+
+//namu darbui 'number format' naudot apvalinimui vienas po kablelio arba round. Patarimas slack kaip grupuot.
+
+
+//usort( $automobiliai, function (Radar $auto1, Radar $auto2){
+//    return $auto1->getInfo() $auto2-><>
+//});
+
+echo $automobiliai[0];
+
+
+
 
 ?>
