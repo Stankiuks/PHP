@@ -7,7 +7,7 @@
  */
 
 class Ivykis {
-    public $pavadiinimas;
+    public $pavadinimas;
     public $data;
 
     function __construct($pavadinimas, \DateTime $dateTime)
