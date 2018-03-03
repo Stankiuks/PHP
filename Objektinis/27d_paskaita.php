@@ -1,5 +1,5 @@
 <?php
-
+namespace BalticTalents\RadarModule
 
 class Radar
 {
@@ -33,15 +33,9 @@ new Radar(new \DateTime('2017-03-01'), 'BRR004', '20km', '380 sec'),
 ];
 
 //anonimine funkcija
-usort($automobiliai, function($p1, $p2) {
-    if ($p1['ugis'] == $p2['ugis‘]) {
-return 0;
-} elseif ($p1['ugis'] < $p2['ugis‘]) {
-        return -1;
-    } else {
-        return 1;
-    }
-});
+//usort($automobiliai, function (Radar $auto1, Radar $auto2) {
+//    return $auto1->getDate() <=> $auto2->getDate();
+//});
 
 
 //namu darbui 'number format' naudot apvalinimui vienas po kablelio arba round. Patarimas slack kaip grupuot.
